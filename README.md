@@ -135,18 +135,3 @@ CREATE TABLE IF NOT EXISTS users (
 * Make sure your MySQL service is running and accessible.
 
 ---
-
-## 📬 Contact
-
-For any issues or questions, feel free to reach out or open an issue in the repository.
-
----
-
-```
-
-Let me know if:
-- You want this customized with **your GitHub repo URL**
-- You want to include a `Dockerfile` for easier setup
-- You want deployment instructions (e.g., Vercel + PlanetScale)
-```
-# ProductHunt
