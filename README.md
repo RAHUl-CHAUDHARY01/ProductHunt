@@ -1,6 +1,3 @@
-Here's a complete and clean `README.md` for your **Next.js + MySQL (without Prisma)** project using **TypeScript** and **App Router**.
-
-You can place this at the root of your project as `README.md`:
 
 ---
 
@@ -48,8 +45,8 @@ my-app/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone git@github.com:RAHUl-CHAUDHARY01/ProductHunt.git
+cd ProductHunt
 ````
 
 ---
@@ -64,30 +61,15 @@ npm install
 
 ### 3. Setup the Database
 
-1. Make sure **MySQL is running** on your system.
+1. Make sure MySQL is running on your system.
 2. Create a database manually, e.g., `mydatabase`.
 3. Run the provided SQL schema:
 
 ```bash
-mysql -u root -p mydatabase < sql/init.sql
+mysql -u root -p mydatabase < ./commands.sql
 ```
 
 This creates the `users` table.
-
----
-
-### 4. Configure Environment Variables
-
-Create a `.env` file at the root:
-
-```env
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=yourpassword
-DB_NAME=mydatabase
-```
-
-> 💡 Make sure to replace with your local MySQL credentials.
 
 ---
 
@@ -114,7 +96,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-## 👨‍💻 Example Table Schema (Already in `sql/init.sql`)
+## 👨‍💻 Example Table Schema (Already in `./commands.sql`)
 
 ```sql
 CREATE TABLE IF NOT EXISTS users (
