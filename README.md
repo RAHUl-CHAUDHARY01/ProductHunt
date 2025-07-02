@@ -1,36 +1,152 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Here's a complete and clean `README.md` for your **Next.js + MySQL (without Prisma)** project using **TypeScript** and **App Router**.
 
-## Getting Started
+You can place this at the root of your project as `README.md`:
 
-First, run the development server:
+---
+
+```md
+# 🚀 Next.js + MySQL (TypeScript) Full-Stack Starter
+
+This is a full-stack boilerplate using **Next.js (App Router)**, **TypeScript**, and **MySQL (with `mysql2`)** without Prisma. It includes:
+
+- RESTful API with raw SQL
+- Simple user creation and listing
+- Environment variable configuration
+- Fully typed using TypeScript
+
+---
+
+## 📦 Tech Stack
+
+- **Next.js (App Router)**
+- **TypeScript**
+- **MySQL**
+- **mysql2** (for direct DB access)
+- **ESLint** + **TailwindCSS** (optional)
+
+---
+
+## 📁 Project Structure
+
+```
+
+my-app/
+├── app/
+│   ├── api/users/route.ts       → API endpoints (GET, POST)
+│   └── page.tsx                 → Home page (with form)
+├── lib/db.ts                    → MySQL connection utility
+├── types/user.ts                → User type interface
+├── sql/init.sql                 → SQL script to create tables
+├── .env                         → DB credentials (ignored by git)
+├── README.md
+
+````
+
+---
+
+## ⚙️ Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+````
+
+---
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+---
+
+### 3. Setup the Database
+
+1. Make sure **MySQL is running** on your system.
+2. Create a database manually, e.g., `mydatabase`.
+3. Run the provided SQL schema:
+
+```bash
+mysql -u root -p mydatabase < sql/init.sql
+```
+
+This creates the `users` table.
+
+---
+
+### 4. Configure Environment Variables
+
+Create a `.env` file at the root:
+
+```env
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=yourpassword
+DB_NAME=mydatabase
+```
+
+> 💡 Make sure to replace with your local MySQL credentials.
+
+---
+
+### 5. Run the Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧪 Features
 
-## Learn More
+### ✅ GET `/api/users`
 
-To learn more about Next.js, take a look at the following resources:
+* Returns all users from the database.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### ✅ POST `/api/users`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* Accepts JSON `{ name, email }`
+* Inserts new user into the `users` table.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 👨‍💻 Example Table Schema (Already in `sql/init.sql`)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```sql
+CREATE TABLE IF NOT EXISTS users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL UNIQUE,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+---
+
+## 📝 Notes
+
+* ESLint warns against using `any`. We're using proper types like `ResultSetHeader` from `mysql2`.
+* Designed for **development only** – not production-optimized.
+* Make sure your MySQL service is running and accessible.
+
+---
+
+## 📬 Contact
+
+For any issues or questions, feel free to reach out or open an issue in the repository.
+
+---
+
+```
+
+Let me know if:
+- You want this customized with **your GitHub repo URL**
+- You want to include a `Dockerfile` for easier setup
+- You want deployment instructions (e.g., Vercel + PlanetScale)
+```
+# ProductHunt
