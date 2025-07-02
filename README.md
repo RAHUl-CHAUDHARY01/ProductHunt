@@ -28,7 +28,7 @@ This is a full-stack boilerplate using **Next.js (App Router)**, **TypeScript**,
 
 ## 📁 Project Structure
 
-```
+```bash
 
 my-app/
 ├── app/
