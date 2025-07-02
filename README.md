@@ -7,7 +7,7 @@ You can place this at the root of your project as `README.md`:
 ```md
 # 🚀 Next.js + MySQL (TypeScript) Full-Stack Starter
 
-This is a full-stack boilerplate using **Next.js (App Router)**, **TypeScript**, and **MySQL (with `mysql2`)** without Prisma. It includes:
+This is a full-stack boilerplate using Next.js (App Router), TypeScript, and MySQL (with `mysql2`). It includes:
 
 - RESTful API with raw SQL
 - Simple user creation and listing
@@ -18,17 +18,16 @@ This is a full-stack boilerplate using **Next.js (App Router)**, **TypeScript**,
 
 ## 📦 Tech Stack
 
-- **Next.js (App Router)**
-- **TypeScript**
-- **MySQL**
-- **mysql2** (for direct DB access)
-- **ESLint** + **TailwindCSS** (optional)
+- Next.js (App Router)
+- TypeScript
+- MySQL
+- mysql2 (for direct DB access)
+- ESLint + TailwindCSS (optional)
 
 ---
 
 ## 📁 Project Structure
 
-```bash
 
 my-app/
 ├── app/
